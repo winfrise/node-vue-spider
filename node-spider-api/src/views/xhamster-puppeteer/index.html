@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爬虫</title>
+  <script src="/lib/vue.js"></script>
+  <script src="/lib/axios.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <header>
+    <h1>爬虫</h1>
+  </header>
+
+  <main>
+    <div>
+      <h1>一、采集网址规则</h1>
+    </div>
+
+    <div>
+      <h1>二、采集内容规则</h1>
+    </div>
+  </main>
+</div>
+
+<script>
+
+  new Vue({
+    el: '#app',
+    data: {
+      username: '',
+      password: ''
+    },
+    methods: {
+      start () {
+        let { username, password} = this
+        axios.post('/api/juejin/start', {
+          username,
+          password
+        })
+          .then(res => {
+            console.log(res)
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      }
+    }
+  })
+</script>
+  
+</body>
+</html>
