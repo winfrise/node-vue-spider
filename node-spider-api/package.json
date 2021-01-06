@@ -15,7 +15,7 @@
   "dependencies": {
     "@koa/multer": "^2.0.2",
     "async": "^3.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.3",
     "config-lite": "^2.0.0",
     "ejs": "^2.5.6",
